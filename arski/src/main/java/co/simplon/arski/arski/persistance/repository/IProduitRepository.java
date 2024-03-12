@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 import co.simplon.arski.arski.persistance.entity.Produit;
 
 public interface IProduitRepository extends JpaRepository<Produit, Integer> {
-    @Query("select p from Produit p where p.nom = :nom")
+    @Query(ProduitQuery.REQUETE_RECUPERER_PAR_NOM)
     Produit recupereProduitParNom(final String nom);
 }

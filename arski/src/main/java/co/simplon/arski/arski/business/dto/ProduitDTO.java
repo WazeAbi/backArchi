@@ -1,5 +1,5 @@
 package co.simplon.arski.arski.business.dto;
-public class ProduitDTO {
+public class  ProduitDTO {
     private int id;
     private String nom;
     private double prix;

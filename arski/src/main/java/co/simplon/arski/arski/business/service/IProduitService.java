@@ -5,8 +5,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface IProduitService {
-    ProduitDto recuperParId(final int id);
-    void ajouterProduit(ProduitDto produit);
-    void modifierProduit(ProduitDto produit);
-    void supprimerProduit(ProduitDto produit);
+    ProduitDto recuperParId( final int id);
+    void ajouterProduit( ProduitDto produit);
+    void modifierProduit( ProduitDto produit);
+    void supprimerProduit( ProduitDto produit);
 }

@@ -5,6 +5,9 @@ import co.simplon.arski.arski.business.dto.ProduitDTO;
 import co.simplon.arski.arski.persistance.entity.Produit;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class ProduitConvert {
     private static ProduitConvert instance;
@@ -33,5 +36,19 @@ public class ProduitConvert {
         produitDTO.setDescription(produit.getDescription());
         produitDTO.setCategorie(produit.getCategorie());
         return produitDTO;
+    }
+    public List<Produit> convertListDTOTOProduit (final List<ProduitDTO> ListProduitDTO){
+        final List<Produit> ListProduit = new ArrayList<>();
+        for (ProduitDTO produitDTO : ListProduitDTO) {
+            ListProduit.add(convertProduitDTOToProduit(produitDTO));
+        }
+        return ListProduit;
+    }
+    public List<ProduitDTO> convertListProduitToProduitDTO(final List<Produit> ListProduit){
+        final List<ProduitDTO> ListProduitDto = new ArrayList<>();
+        for (Produit produit : ListProduit) {
+            ListProduitDto.add(convertProduitToProduitDTO(produit));
+        }
+        return ListProduitDto;
     }
 }

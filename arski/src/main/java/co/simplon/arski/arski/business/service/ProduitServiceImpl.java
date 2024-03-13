@@ -1,24 +1,25 @@
 package co.simplon.arski.arski.business.service;
 
+import co.simplon.arski.arski.business.dto.ProduitDTO;
 public class ProduitServiceImpl implements IProduitService {
     @Override
-    public ProduitDto recuperParId(int id) {
+    public ProduitDTO recuperParId(int id) {
         // TODO
         return null;
     }
 
     @Override
-    public void ajouterProduit(ProduitDto produit) {
+    public void ajouterProduit(ProduitDTO produit) {
         // TODO
     }
 
     @Override
-    public void modifierProduit(ProduitDto produit) {
+    public void modifierProduit(ProduitDTO produit) {
         // TODO
     }
 
     @Override
-    public void supprimerProduit(ProduitDto produit) {
+    public void supprimerProduit(ProduitDTO produit) {
         // TODO
     }
 }

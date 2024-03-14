@@ -1,7 +1,6 @@
 package co.simplon.arski.arski.business.service;
 
 import co.simplon.arski.arski.business.dto.ProduitDTO;
-import co.simplon.arski.arski.persistance.entity.Produit;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

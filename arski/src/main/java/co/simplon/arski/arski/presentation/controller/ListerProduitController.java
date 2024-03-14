@@ -1,4 +1,4 @@
-package co.simplon.arski.arski.presentation.controller.produit;
+package co.simplon.arski.arski.presentation.controller;
 
 import co.simplon.arski.arski.business.dto.ProduitDTO;
 import co.simplon.arski.arski.business.service.IProduitService;

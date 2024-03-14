@@ -37,8 +37,8 @@ public class ProduitServiceImpl implements IProduitService {
     }
 
     @Override
-    public void supprimerProduit(ProduitDTO produit) {
-        repo.delete(convert.convertProduitDTOToProduit(produit));
+    public void supprimerProduit(int id) {
+        repo.deleteById(id);
     }
 
     @Autowired

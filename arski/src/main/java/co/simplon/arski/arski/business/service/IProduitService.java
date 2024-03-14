@@ -11,5 +11,5 @@ public interface IProduitService {
     ProduitDTO recuperParId(final int id);
     void ajouterProduit( ProduitDTO produit);
     void modifierProduit( ProduitDTO produit);
-    void supprimerProduit( ProduitDTO produit);
+    void supprimerProduit(int id);
 }

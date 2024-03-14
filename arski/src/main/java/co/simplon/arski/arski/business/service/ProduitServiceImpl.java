@@ -12,12 +12,13 @@ import java.util.List;
 @Service
 public class ProduitServiceImpl implements IProduitService {
     private IProduitRepository repo;
+
     private ProduitConvert convert;
 
     @Override
     public List<ProduitDTO> listerProduits() {
-    final List<Produit> result = repo.findAll();
-    return ProduitConvert.getInstance().convertListProduitToProduitDTO(result);
+        final List<Produit> result = repo.findAll();
+        return ProduitConvert.getInstance().convertListProduitToProduitDTO(result);
     }
 
     @Override
@@ -39,8 +40,14 @@ public class ProduitServiceImpl implements IProduitService {
     public void supprimerProduit(ProduitDTO produit) {
         repo.delete(convert.convertProduitDTOToProduit(produit));
     }
-   @Autowired
-   public void setConvert(ProduitConvert convert) {
+
+    @Autowired
+    public void setConvert(ProduitConvert convert) {
         this.convert = convert;
+    }
+
+    @Autowired
+    public void setRepo(IProduitRepository repo) {
+        this.repo = repo;
     }
 }

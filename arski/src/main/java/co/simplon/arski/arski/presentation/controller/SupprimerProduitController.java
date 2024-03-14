@@ -3,7 +3,6 @@ package co.simplon.arski.arski.presentation.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import co.simplon.arski.arski.business.dto.ProduitDTO;
 import co.simplon.arski.arski.business.service.IProduitService;
 @RestController
 public class SupprimerProduitController {

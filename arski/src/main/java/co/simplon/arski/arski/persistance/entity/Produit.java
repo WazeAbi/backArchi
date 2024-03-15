@@ -20,6 +20,16 @@ public class Produit {
 
     @Column(name = "categorie")
     private String categorie;
+    @Column
+    private String image;
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public int getId() {
         return id;

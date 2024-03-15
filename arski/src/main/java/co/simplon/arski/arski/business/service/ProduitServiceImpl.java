@@ -32,9 +32,21 @@ public class ProduitServiceImpl implements IProduitService {
     }
 
     @Override
-    public void modifierProduit(ProduitDTO produit) {
-        repo.save(convert.convertProduitDTOToProduit(produit));
-    }
+    public void modifierProduit(ProduitDTO produit , int id ) {
+        Produit produitToUpdate = convert.convertProduitDTOToProduit(produit);
+        Produit produitExistant = repo.findById(id).orElse(null);
+        if(produitExistant!= null) {
+            produitExistant.setNom(produitToUpdate.getNom());
+            produitExistant.setPrix(produitToUpdate.getPrix());
+            produitExistant.setDescription(produitToUpdate.getDescription());
+            produitExistant.setCategorie(produitToUpdate.getCategorie());
+            produitExistant.setImage(produitToUpdate.getImage());
+            repo.save(produitExistant);
+        }
+
+        }
+
+
 
     @Override
     public void supprimerProduit(int id) {

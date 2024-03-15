@@ -10,6 +10,6 @@ public interface IProduitService {
     List<ProduitDTO> listerProduits();
     ProduitDTO recuperParId(final int id);
     void ajouterProduit( ProduitDTO produit);
-    void modifierProduit( ProduitDTO produit);
+    void modifierProduit( ProduitDTO produit , int id);
     void supprimerProduit(int id);
 }

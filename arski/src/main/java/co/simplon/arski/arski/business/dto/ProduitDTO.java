@@ -5,6 +5,15 @@ public class  ProduitDTO {
     private double prix;
     private String description;
     private String categorie;
+    private String image;
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public int getId() {
         return id;

@@ -26,6 +26,7 @@ public class ProduitConvert {
         produit.setPrix(produitDTO.getPrix());
         produit.setDescription(produitDTO.getDescription());
         produit.setCategorie(produitDTO.getCategorie());
+        produit.setImage(produitDTO.getImage());
         return produit;
     }
     public ProduitDTO convertProduitToProduitDTO(Produit produit){
@@ -35,6 +36,7 @@ public class ProduitConvert {
         produitDTO.setPrix(produit.getPrix());
         produitDTO.setDescription(produit.getDescription());
         produitDTO.setCategorie(produit.getCategorie());
+        produitDTO.setImage(produit.getImage());
         return produitDTO;
     }
     public List<Produit> convertListDTOTOProduit (final List<ProduitDTO> ListProduitDTO){

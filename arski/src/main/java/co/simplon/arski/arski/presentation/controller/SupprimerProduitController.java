@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 import co.simplon.arski.arski.business.service.IProduitService;
 @RestController
+@CrossOrigin
 public class SupprimerProduitController {
     private IProduitService produitService;
     @DeleteMapping("/produits/{id}")
